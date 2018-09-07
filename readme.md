@@ -1,66 +1,38 @@
-# [Botkit](http://howdy.ai/botkit) - Building Blocks for Building Bots
+#  APS OPS BOT
 
+NPM Dependencies:
 [![npm](https://img.shields.io/npm/v/botkit.svg)](https://www.npmjs.com/package/botkit)
 [![David](https://img.shields.io/david/howdyai/botkit.svg)](https://david-dm.org/howdyai/botkit)
 [![npm](https://img.shields.io/npm/l/botkit.svg)](https://spdx.org/licenses/MIT)
 
-Botkit is designed to ease the process of designing and running useful, creative bots that live inside [Slack](http://slack.com), [Facebook Messenger](http://facebook.com), [Twilio IP Messaging](https://www.twilio.com/docs/api/ip-messaging), and other messaging platforms. Support for new platforms is added regularly!
+APS Botkit is originally based on botkit, with an extended hash memory table for neural learning & Natural language processing.
+based upon openai gym & NRM.
 
-It provides a semantic interface to sending and receiving messages so that developers can focus on creating novel applications and experiences instead of dealing with API endpoints.
+APS Ops Bot is primarily operating using the slack interface.
+It provides a semantic interface to sending and receiving messages so that additional functionality can be expanded simply dealing with API endpoints.
 
-Botkit features a comprehensive set of tools to deal with popular messaging platforms, including:
-
-* [Slack](readme-slack.md)
-* [Facebook Messenger](readme-facebook.md)
-* [Twilio IP Messaging](readme-twilioipm.md)
-* [Microsoft Bot Framework](readme-botframework.md)
-* Yours? [info@howdy.ai](mailto:info@howdy.ai)
-
-## Botkit Studio
-
-[Botkit Studio](https://studio.botkit.ai) is a hosted development environment for bots from the same team that built Botkit.
-Based on feedback from the developer community, as well as experience running our flagship Botkit-powered bot, [Howdy](http://howdy.ai),
+## APS Ops Bot
+special thanks for inspiration from:
+(http://howdy.ai),
 the tools in Botkit Studio allow bot designers and developers to manage many aspects of bot behavior without writing additional code.
 
-[Start building your bot with Botkit Studio](readme-studio.md) and you'll start from day one with extra tools and features that
-help you create and manage a successful bot application. It is also possible to add Studio features to your existing Botkit application. [With a few lines of code](readme-studio.md#adding-studio-features-to-an-existing-bot), you can add access new features and APIs.
-
-Botkit Studio is built on top of Botkit, so everything that works with Botkit continues to just work. All of the available plugins and middleware are compatible!
+because APS opsbot is built using the same middleware as botkit and studio, All of the available plugins and middleware are compatible!
 
 ## Getting Started
-
-There are two ways to start a Botkit project:
-
-1) [Install the Botkit Studio Starter Kit](https://github.com/howdyai/botkit-studio-starter) and build on top of an already fully functioning bot
-that comes pre-configured with popular middleware plug-ins and components.
-
-2) [Install Botkit directly from NPM or Github](#install-botkit-from-npm-or-github) and build a new app from scratch, or use one of the [included examples](#included-examples) as a starting point.
-
-After you've installed Botkit using one of these methods, the first thing you'll need to do is register your bot with a messaging platform, and get a few configuration options set. This will allow your bot to connect, send and receive messages.
-
-If you intend to create a bot that
-lives in Slack, [follow these instructions for attaining a Bot Token](readme-slack.md#getting-started).
-
-If you intend to create a bot that lives in Facebook Messenger, [follow these instructions for configuring your Facebook page](readme-facebook.md#getting-started).
-
-If you intend to create a bot that lives inside a Twilio IP Messaging client, [follow these instructions for configuring your app](readme-twilioipm.md#getting-started).
-
-If you intend to create a bot that uses Microsoft Bot Framework to send and receive messages, [follow these instructions for configuring your app](readme-botframework.md#getting-started).
-
 
 ## Install Botkit from NPM or Github
 
 Botkit is available via NPM.
 
 ```bash
-npm install --save botkit
+npm install --save aps_ops_bot
 ```
 
 You can also check out Botkit directly from Git.
 If you want to use the example code and included bots, it may be preferable to use Github over NPM.
 
 ```bash
-git clone git@github.com:howdyai/botkit.git
+git clone git@github.com:APSau/aps_ops_bot.git
 ```
 
 After cloning the Git repository, you have to install the node dependencies. Navigate to the root of your cloned repository and use npm to install all necessary dependencies.
@@ -76,50 +48,32 @@ npm install --production
 
 ## Core Concepts
 
-Bots built with Botkit have a few key capabilities, which can be used to create clever, conversational applications. These capabilities map to the way real human people talk to each other.
+### To expand and document
 
-Bots can [hear things](#receiving-messages), [say things and reply](#sending-messages) to what they hear.
-
-With these two building blocks, almost any type of conversation can be created.
-
-To organize the things a bot says and does into useful units, Botkit bots have a subsystem available for managing [multi-message conversations](#multi-message-replies-to-incoming-messages). Conversations add features like the ability to ask a question, queue several messages at once, and track when an interaction has ended.  Handy!
-
-After a bot has been told what to listen for and how to respond,
-it is ready to be connected to a stream of incoming messages. Currently, Botkit supports receiving messages from a variety of sources:
-
-* [Slack Real Time Messaging (RTM)](http://api.slack.com/rtm)
-* [Slack Incoming Webhooks](http://api.slack.com/incoming-webhooks)
-* [Slack Slash Commands](http://api.slack.com/slash-commands)
-* [Facebook Messenger Webhooks](https://developers.facebook.com/docs/messenger-platform/implementation)
-* [Twilio IP Messaging](https://www.twilio.com/user/account/ip-messaging/getting-started)
-* [Microsoft Bot Framework](http://botframework.com/)
-
-Read more about [connecting your bot to Slack](readme-slack.md#connecting-your-bot-to-slack), [connecting your bot to Facebook](readme-facebook.md#getting-started), [connecting your bot to Twilio](readme-twilioipm.md#getting-started),
-or [connecting your bot to Microsoft Bot Framework](readme-botframework.md#getting-started)
 
 ## Included Examples
 
-These examples are included in the Botkit [Github repo](https://github.com/howdyai/botkit).
+These examples are included in this repo [Github repo].
 
-[slack_bot.js](https://github.com/howdyai/botkit/blob/master/slack_bot.js) An example bot that can be connected to your team. Useful as a basis for creating your first bot!
+[slack_bot.js](https://github.com/APSau/aps_ops_bot/blob/master/slack_bot.js) An example bot that can be connected to your team. Useful as a basis for creating your first bot!
 
-[facebook_bot.js](https://github.com/howdyai/botkit/blob/master/facebook_bot.js) An example bot that can be connected to your Facebook page. Useful as a basis for creating your first bot!
+[facebook_bot.js](https://github.com/APSau/aps_ops_bot/blob/master/facebook_bot.js) An example bot that can be connected to your Facebook page. Useful as a basis for creating your first bot!
 
-[twilio_ipm_bot.js](https://github.com/howdyai/botkit/blob/master/twilio_ipm_bot.js) An example bot that can be connected to your Twilio IP Messaging client. Useful as a basis for creating your first bot!
+[twilio_ipm_bot.js](https://github.com/APSau/aps_ops_bot/blob/master/twilio_ipm_bot.js) An example bot that can be connected to your Twilio IP Messaging client. Useful as a basis for creating your first bot!
 
-[botframework_bot.js](https://github.com/howdyai/botkit/blob/master/botframework_bot.js) An example bot that can be connected to the Microsoft Bot Framework network. Useful as a basis for creating your first bot!
+[botframework_bot.js](https://github.com/APSau/aps_ops_bot/blob/master/botframework_bot.js) An example bot that can be connected to the Microsoft Bot Framework network. Useful as a basis for creating your first bot!
 
-[examples/demo_bot.js](https://github.com/howdyai/botkit/blob/master/examples/demo_bot.js) another example bot that uses different ways to send and receive messages.
+[examples/demo_bot.js](https://github.com/APSau/aps_ops_bot/blob/master/examples/demo_bot.js) another example bot that uses different ways to send and receive messages.
 
-[examples/team_outgoingwebhook.js](https://github.com/howdyai/botkit/blob/master/examples/team_outgoingwebhook.js) an example of a Botkit app that receives and responds to outgoing webhooks from a single team.
+[examples/team_outgoingwebhook.js](https://github.com/APSau/aps_ops_bot/blob/master/examples/team_outgoingwebhook.js) an example of a Botkit app that receives and responds to outgoing webhooks from a single team.
 
-[examples/team_slashcommand.js](https://github.com/howdyai/botkit/blob/master/examples/team_slashcommand.js) an example of a Botkit app that receives slash commands from a single team.
+[examples/team_slashcommand.js](https://github.com/APSau/aps_ops_bot/blob/master/examples/team_slashcommand.js) an example of a Botkit app that receives slash commands from a single team.
 
-[examples/slackbutton_bot.js](https://github.com/howdyai/botkit/blob/master/examples/slackbutton_bot.js) an example of using the Slack Button to offer a bot integration.
+[examples/slackbutton_bot.js](https://github.com/APSau/aps_ops_bot/blob/master/examples/slackbutton_bot.js) an example of using the Slack Button to offer a bot integration.
 
-[examples/slackbutton_incomingwebhooks.js](https://github.com/howdyai/botkit/blob/master/examples/slackbutton_incomingwebhooks.js) an example of using the Slack Button to offer an incoming webhook integration. This example also includes a simple form which allows you to broadcast a message to any team who adds the integration.
+[examples/slackbutton_incomingwebhooks.js](https://github.com/APSau/aps_ops_bot/blob/master/examples/slackbutton_incomingwebhooks.js) an example of using the Slack Button to offer an incoming webhook integration. This example also includes a simple form which allows you to broadcast a message to any team who adds the integration.
 
-[example/sentiment_analysis.js](https://github.com/howdyai/botkit/blob/master/examples/sentiment_analysis.js) a simple example of a chatbot using sentiment analysis. Keeps a running score of each user based on positive and negative keywords. Messages and thresholds can be configured.
+[example/sentiment_analysis.js](https://github.com/APSau/aps_ops_bot/blob/master/examples/sentiment_analysis.js) a simple example of a chatbot using sentiment analysis. Keeps a running score of each user based on positive and negative keywords. Messages and thresholds can be configured.
 
 
 ## Basic Usage
@@ -160,29 +114,6 @@ controller.hears('hello',['direct_message','direct_mention','mention'],function(
 });
 
 ```
-
-### Botkit Statistics Gathering
-
-As of version 0.4, Botkit records anonymous usage statistics about Botkit bots in the wild.
-These statistics are used by the Botkit team at [Howdy](http://howdy.ai) to measure and
-analyze the Botkit community, and help to direct resources to the appropriate parts of the project.
-
-We take the privacy of Botkit developers and their users very seriously. Botkit does not collect,
-or transmit any message content, user data, or personally identifiable information to our statistics system.
-The information that is collected is anonymized inside Botkit and converted using one-way encryption
-into a hash before being transmitted.
-
-#### Opt Out of Stats
-
-To opt out of the stats collection, pass in the `stats_optout` parameter when initializing Botkit,
-as seen in the example below:
-
-```
-var controller = Botkit.slackbot({
-    stats_optout: true
-});
-```
-
 
 # Developing with Botkit
 
