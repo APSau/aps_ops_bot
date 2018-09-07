@@ -1,0 +1,16 @@
+var request = require('request');
+
+module.exports = function(controller) {
+    controller.hears(['How many clients'], 'ambient', function(bot, message) {
+
+        request('http://api.com/totalUsers', function (err, response, body) {
+
+            console.log('error: ', err); // Handle the error if one occurred
+            console.log('statusCode: ', response && response.statusCode); // Check 200 or such
+            console.log('This is the count of users: ', body.usersCount);
+
+            bot.reply(message, 'There are ' + body.usersCount + ' clients connected');
+
+        });
+    });
+};
